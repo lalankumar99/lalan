@@ -1,8 +1,56 @@
+const skills = [
+  {
+    title: "Electrical Engineering",
+    icon: "/icons/electrical-icon.png",
+  },
+  {
+    title: "Web Development",
+    icon: "/icons/web-development-icon.png",
+  },
+  {
+    title: "App Development",
+    icon: "/icons/app-development-icon.png",
+  },
+  {
+    title: "UI Design",
+    icon: "/icons/ui-design-icon.png",
+  },
+];
+
+const projects = [
+  {
+    number: "01",
+    title: "Polytechnic Hub",
+    description:
+      "An educational platform for polytechnic students with notes, courses, quizzes and learning resources.",
+    image: "/projects/polytechnic-hub.png",
+  },
+  {
+    number: "02",
+    title: "Personal Portfolio",
+    description:
+      "A modern personal portfolio website built with Next.js and designed around an electrical engineering theme.",
+    image: "/projects/portfolio.png",
+  },
+  {
+    number: "03",
+    title: "Electrical Projects",
+    description:
+      "Practical electrical engineering projects focused on learning, experimentation and real-world applications.",
+    image: "/projects/electrical-project.png",
+  },
+];
+
 export default function Home() {
   return (
     <main className="home">
       <nav className="navbar">
-        <div className="logo">LK</div>
+        <a href="#home" className="logo">
+          <img
+            src="/icons/logo.png"
+            alt="Lalan Kumar Portfolio Logo"
+          />
+        </a>
 
         <div className="nav-links">
           <a href="#home">Home</a>
@@ -18,14 +66,14 @@ export default function Home() {
           <p className="tag">DIPLOMA ENGINEERING STUDENT</p>
 
           <h1>
-            Hi, I'm <span>Lalan Kumar</span>
+            Hi, I&apos;m <span>Lalan Kumar</span>
           </h1>
 
           <h2>Electrical Engineering Student</h2>
 
           <p className="description">
-            Passionate about Electrical Engineering, technology and building
-            useful digital projects.
+            I am passionate about Electrical Engineering, technology,
+            web development and building useful digital projects.
           </p>
 
           <div className="buttons">
@@ -40,84 +88,102 @@ export default function Home() {
         </div>
 
         <div className="electrical-card">
-          <div className="circle">
-            ⚡
-          </div>
+          <img
+            src="/icons/electrical-icon.png"
+            alt="Electrical Engineering"
+            className="hero-icon"
+          />
 
-          <div className="circuit-line line-one"></div>
-          <div className="circuit-line line-two"></div>
-          <div className="circuit-line line-three"></div>
+          <div className="circuit-line line-one" />
+          <div className="circuit-line line-two" />
+          <div className="circuit-line line-three" />
 
-          <div className="node node-one"></div>
-          <div className="node node-two"></div>
-          <div className="node node-three"></div>
+          <div className="node node-one" />
+          <div className="node node-two" />
+          <div className="node node-three" />
         </div>
       </section>
 
       <section id="about" className="section">
         <p className="section-tag">ABOUT ME</p>
+
         <h2>Electrical Engineering Student</h2>
 
         <p>
           I am a Diploma student interested in electrical systems,
-          technology, web development and innovative projects. I enjoy
-          learning new technologies and turning ideas into practical projects.
+          modern technology, web development and innovative digital
+          projects. I enjoy learning new technologies and turning
+          ideas into practical projects.
         </p>
       </section>
 
       <section id="skills" className="section">
         <p className="section-tag">MY SKILLS</p>
+
         <h2>Skills & Technologies</h2>
 
         <div className="cards">
-          <div className="card">⚡ Electrical Engineering</div>
-          <div className="card">💻 Web Development</div>
-          <div className="card">📱 App Development</div>
-          <div className="card">🎨 UI Design</div>
+          {skills.map((skill) => (
+            <div className="card" key={skill.title}>
+              <img
+                src={skill.icon}
+                alt={skill.title}
+                className="skill-icon"
+              />
+
+              <h3>{skill.title}</h3>
+            </div>
+          ))}
         </div>
       </section>
 
       <section id="projects" className="section">
-        <p className="section-tag">PROJECTS</p>
-        <h2>My Projects</h2>
+        <p className="section-tag">MY WORK</p>
+
+        <h2>Featured Projects</h2>
 
         <div className="cards">
-          <div className="project-card">
-            <span>01</span>
-            <h3>Polytechnic Hub</h3>
-            <p>
-              An educational platform for polytechnic students.
-            </p>
-          </div>
+          {projects.map((project) => (
+            <article
+              className="project-card"
+              key={project.number}
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-image"
+              />
 
-          <div className="project-card">
-            <span>02</span>
-            <h3>Portfolio Website</h3>
-            <p>
-              A modern personal portfolio built with Next.js.
-            </p>
-          </div>
+              <div className="project-content">
+                <span>{project.number}</span>
 
-          <div className="project-card">
-            <span>03</span>
-            <h3>Electrical Projects</h3>
-            <p>
-              Practical electrical engineering learning projects.
-            </p>
-          </div>
+                <h3>{project.title}</h3>
+
+                <p>{project.description}</p>
+
+                <a href="#contact" className="project-link">
+                  View Project
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
       <section id="contact" className="section contact">
         <p className="section-tag">CONTACT</p>
-        <h2>Let's Connect</h2>
+
+        <h2>Let&apos;s Connect</h2>
 
         <p>
-          Interested in my work or want to connect?
+          Interested in my work or want to connect with me?
         </p>
 
-        <a href="mailto:your@email.com" className="primary-btn">
-          Email Me
+        <a
+          href="mailto:your@email.com"
+          className="primary-btn"
+        >
+          Contact Me
         </a>
       </section>
 
