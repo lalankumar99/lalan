@@ -89,6 +89,11 @@ export default function Home() {
 
         <div className="electrical-card">
           <img
+  src="/images/profile.png"
+  alt="Lalan Kumar"
+  className="profile-image"
+/>
+          <img
             src="/icons/electrical-icon.png"
             alt="Electrical Engineering"
             className="hero-icon"
