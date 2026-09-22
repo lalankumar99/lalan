@@ -127,5 +127,3 @@ export default function Home() {
     </main>
   );
 }
-
-अब Next step "app/globals.css" होगा, जिससे पूरा page premium Electrical dark theme में दिखाई देगा।
