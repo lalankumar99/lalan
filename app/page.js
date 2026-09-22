@@ -140,24 +140,29 @@ export default function Home() {
 </section>
 
       <section id="skills" className="section">
-        <p className="section-tag">MY SKILLS</p>
+  <p className="section-tag">MY SKILLS</p>
 
-        <h2>Skills & Technologies</h2>
+  <h2>Skills & Technologies</h2>
 
-        <div className="cards">
-          {skills.map((skill) => (
-            <div className="card" key={skill.title}>
-              <img
-                src={skill.icon}
-                alt={skill.title}
-                className="skill-icon"
-              />
+  <div className="cards">
+    {skills.map((skill) => (
+      <div className="card" key={skill.title}>
+        <img
+          src={skill.icon}
+          alt={skill.title}
+          className="skill-icon"
+        />
 
-              <h3>{skill.title}</h3>
-            </div>
-          ))}
+        <div>
+          <h3>{skill.title}</h3>
+          <p className="skill-description">
+            Professional knowledge and practical learning.
+          </p>
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
 
       <section id="projects" className="section">
         <p className="section-tag">MY WORK</p>
