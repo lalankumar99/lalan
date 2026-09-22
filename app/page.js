@@ -109,18 +109,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="section">
-        <p className="section-tag">ABOUT ME</p>
+      <section id="about" className="section about-section">
+  <p className="section-tag">ABOUT ME</p>
 
-        <h2>Electrical Engineering Student</h2>
+  <h2>Electrical Engineering Student</h2>
 
-        <p>
-          I am a Diploma student interested in electrical systems,
-          modern technology, web development and innovative digital
-          projects. I enjoy learning new technologies and turning
-          ideas into practical projects.
-        </p>
-      </section>
+  <p className="about-text">
+    I am Lalan Kumar, a Diploma Electrical Engineering student with a
+    strong interest in electrical systems, technology and digital
+    innovation. I enjoy learning new technologies and building
+    practical projects that combine engineering with modern technology.
+  </p>
+
+  <div className="about-details">
+    <div>
+      <span>Education</span>
+      <strong>Diploma in Electrical Engineering</strong>
+    </div>
+
+    <div>
+      <span>Field</span>
+      <strong>Electrical Engineering</strong>
+    </div>
+
+    <div>
+      <span>Interest</span>
+      <strong>Technology & Projects</strong>
+    </div>
+  </div>
+</section>
 
       <section id="skills" className="section">
         <p className="section-tag">MY SKILLS</p>
